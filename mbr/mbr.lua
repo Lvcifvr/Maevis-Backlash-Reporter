@@ -35,8 +35,8 @@ end
 function report()
   local text = "\124cFFFF0000[MBR]: "
   for index, name in pairs(instability_players) do
-    text = text .. name .. " blowed up with: " .. (instability_stacks[name] or "?") .. " stacks!"
-  end
+   SendChatMessage = text("Blowed up with", ..(L.instability_stacks[name] or "?") :format(instability_players), "RAID")
+end
   print(text)
   reset()
 end
